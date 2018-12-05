@@ -1,0 +1,27 @@
+ending=word[-1]
+ending_2last_letters=word[-2:]
+ending_4last_letters= word[-4:]
+#prepositional case 
+first_letter= word[:1]
+vowels_prepositional={'а', 'о','у','э','и'} #vowels that change the preposition 
+dictionary_empty={}
+dictionary_prepositional= {'время':'времени', 'скворец':'скворца', 'огурец':'огурца','еропеец':'европейца','соль':'соли', 'кофе':'кофе','имя':'имени',
+'бремя':'бремени', 'вымя':' вымени','стремя':'стремени', 'племя':'племени','темя':'темени',' семя':'семени','знамя':'знамени', 'пламя':'пламени',
+'бандероль': 'бандероли', 'заяц':'зяйца','боль':'боли', 'болезнь':'болезни','дверь':'двери', 'дочь':'дочери', 'пыль':'пыли','жизнь':'жизни',
+'казнь':'казни', 'мать':'матери',' мебель':'мебели','сталь':'стали','мысль':'мысли','обувь':'обуви', 'осень':'осени', 'очередь':'очереди', 'эмаль':'эмали',
+'печаль':'печали','пыль':'пыли', 'роль':'роли', 'тень':'тени', 'лень':'лени','вонь':'вони',
+'ткань':'ткани',  'цель':'цели', 'церковь':'церкви', 'модель':'модели', 'рвань':'рвани',
+'лань':'лани', 'дрянь':'дряни', 'болезнь':'болезни', 'жизни':'жизни', 'боязнь':'боязни',
+'моль':'моли','степь':'степи', 'вермишель':'вермишели', 'ваниль':'ванили',
+'виолончель':'виолончели', 'боль':'боли', 'сад':'саду', 'аэропорт':'аэропорту',
+'год':'году', 'пол':'полу', 'шкаф':'шкафу' , 'угол':'углу', 'лес':'лесу', 'мост':'мосту', 'день':'дне', 'Беларусь':'Беларуси'}
+if word in dictionary_prepositional:
+  print('Prepositional case:' +' о' +' '+ dictionary_prepositional[word])
+elif ending in consonants:
+  print(' Prepositional case:'+' о'+' '+word+'е')
+elif ending_2last_letters=='ия'or ending_2last_letters=='ие' or ending_2last_letters=='чь' or ending_2last_letters=='шь'or ending_2last_letters=='жь'or ending_2last_letters=='щь'or ending_4last_letters=='ость' or ending_4last_letters=='есть':
+  print(' Prepositional case:'+'о'+' '+word[:-1]+'и')
+elif ending in vowels or ending=='о' or ending=='я'or ending=='е'or ending=='ь' or ending=='й':
+  print (' Prepositional case:'+' о'+' '+word[:-1]+'е')
+#elif first_letter in vowels_prepositional:
+#  print('Prepositional case:'+'об'+' '+ 
