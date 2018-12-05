@@ -3,7 +3,6 @@ ending_2last_letters=word[-2:]
 ending_4last_letters= word[-4:]
 #prepositional case 
 first_letter= word[:1]
-vowels_prepositional={'а', 'о','у','э','и'} #vowels that change the preposition 
 dictionary_empty={}
 dictionary_prepositional= {'время':'времени', 'скворец':'скворца', 'огурец':'огурца','еропеец':'европейца','соль':'соли', 'кофе':'кофе','имя':'имени',
 'бремя':'бремени', 'вымя':' вымени','стремя':'стремени', 'племя':'племени','темя':'темени',' семя':'семени','знамя':'знамени', 'пламя':'пламени',
