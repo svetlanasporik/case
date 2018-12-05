@@ -15,13 +15,19 @@ dictionary_prepositional= {'время':'времени', 'скворец':'ск
 'моль':'моли','степь':'степи', 'вермишель':'вермишели', 'ваниль':'ванили',
 'виолончель':'виолончели', 'боль':'боли', 'сад':'саду', 'аэропорт':'аэропорту',
 'год':'году', 'пол':'полу', 'шкаф':'шкафу' , 'угол':'углу', 'лес':'лесу', 'мост':'мосту', 'день':'дне', 'Беларусь':'Беларуси'}
+empty_dict={}
 if word in dictionary_prepositional:
-  print('Prepositional case:' +' о' +' '+ dictionary_prepositional[word])
+ empty_dict[word]=dictionary_prepositional[word]
 elif ending in consonants:
-  print(' Prepositional case:'+' о'+' '+word+'е')
+  empty_dict[word]=word+'е'
 elif ending_2last_letters=='ия'or ending_2last_letters=='ие' or ending_2last_letters=='чь' or ending_2last_letters=='шь'or ending_2last_letters=='жь'or ending_2last_letters=='щь'or ending_4last_letters=='ость' or ending_4last_letters=='есть':
-  print(' Prepositional case:'+'о'+' '+word[:-1]+'и')
+  empty_dict[word]=word[:-1]+'и'
 elif ending in vowels or ending=='о' or ending=='я'or ending=='е'or ending=='ь' or ending=='й':
-  print (' Prepositional case:'+' о'+' '+word[:-1]+'е')
-#elif first_letter in vowels_prepositional:
-#  print('Prepositional case:'+'об'+' '+ 
+  empty_dict[word]=word[:-1]+'е'
+vowels_prepositional={'а', 'о','у','э','и'}
+first_letter= word[:1]
+if first_letter in vowels_prepositional:
+  print ('Prepositional case:' +' об' +' '+ empty_dict[word])
+else:
+  print ('Prepositional case:' +' о' +' '+ empty_dict[word])
+
